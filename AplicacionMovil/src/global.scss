@@ -1,0 +1,125 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+//@import '@ionic/angular/css/palettes/dark.system.css';
+/* Forzamos el diseño idéntico al video para versiones modernas de Ionic */
+/* Estilos para que quede idéntico al diseño del chico */
+ 
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  width: 100%;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.custom-input {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 15px !important;
+  height: 62px !important;
+  padding: 0 14px;
+  display: flex !important;
+  align-items: center !important;
+  width: 100%;
+  box-sizing: border-box;
+
+  ion-icon {
+    font-size: 22px;
+    color: #94a3b8 !important;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  ion-input {
+    font-size: 15px;
+    flex: 1;
+    height: 100%;
+    margin: 0 !important;
+    --label-color: #94a3b8 !important;
+    --color: #334155 !important;
+    --padding-start: 12px !important;
+    --border-width: 0 !important;
+    --inner-border-width: 0 !important;
+    --highlight-color-valid: transparent !important;
+    --highlight-color-invalid: transparent !important;
+
+    &.ion-invalid {
+      --label-color: #94a3b8 !important;
+      --color: #334155 !important;
+    }
+
+    &::part(container) {
+      min-height: unset !important;
+      height: 100% !important;
+      padding-top: 14px !important;
+    }
+
+    &::part(native) {
+      background: transparent !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+      -webkit-text-fill-color: #334155 !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  ion-button {
+    margin: 0 !important;
+    height: 100%;
+    flex-shrink: 0;
+    --padding-end: 0px !important;
+    --padding-start: 0px !important;
+    --color: #94a3b8 !important;
+    
+    ion-icon {
+      margin: 0 !important;
+    }
+  }
+}

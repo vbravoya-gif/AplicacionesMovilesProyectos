@@ -1,0 +1,30 @@
+<app-header title="Login"></app-header>
+
+<ion-content class="ion-padding">
+  <div class="d-flex-center">
+
+    <form [formGroup]="form" class="auth-form">
+
+      <app-custom-input
+        autocomplete="email"
+        icon="mail-outline"
+        [control]="form.controls.email"
+        type="email"
+        label="Correo">
+      </app-custom-input>
+
+      <app-custom-input
+        autocomplete="current-password"
+        icon="lock-closed-outline"
+        [control]="form.controls.password"
+        type="password"
+        label="Contraseña">
+      </app-custom-input>
+
+      <div class="ion-margin-top ion-padding">
+        <p style="color: #737373; font-family: monospace;">{{ form.value | json }}</p>
+      </div>
+
+    </form> 
+    </div>
+</ion-content>
