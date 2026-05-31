@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px; /* Un poco más de espacio */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* 🎨 Estilos para que la imagen JPG se vea perfecta */
+    .logo-img {
+        width: 100px;        /* Tamaño grande y estético */
+        height: auto;
+        margin-bottom: 12px;
+        border-radius: 8px;   /* Por si quieres que el JPG tenga esquinas redondeadas */
+        object-fit: contain;  /* Asegura que el mueble se vea completo */
+    }
+
+    h1 {
+        font-size: 28px;
+        color: #334155;        
+        margin: 0;
+        font-family: sans-serif;
+        letter-spacing: 0.5px;
+
+        strong {
+            font-weight: 800;
+            color: #1e3a8a;    /* Mantiene el "IGEN" en el azul de tu empresa */
+        }
+    }
+}
